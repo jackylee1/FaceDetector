@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facelarge" translatesAutoresizingMaskIntoConstraints="NO" id="6Au-1I-YhG">
+                                <rect key="frame" x="95" y="171" width="184" height="191"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="184" id="7Lw-Ef-qnv"/>
+                                    <constraint firstAttribute="height" constant="191" id="Q2G-bm-618"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DJILogo" translatesAutoresizingMaskIntoConstraints="NO" id="xOW-Ak-UnT">
+                                <rect key="frame" x="95" y="370" width="184" height="97"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xOW-Ak-UnT" secondAttribute="height" multiplier="184:97" id="UhH-ZB-KSy"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SURVEILLANCE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kve-du-fiN">
+                                <rect key="frame" x="95" y="475" width="184" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="kve-du-fiN" secondAttribute="height" multiplier="184:21" id="xwL-wX-qB4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.70202250971852664" green="0.93063693576388884" blue="0.44173484409135827" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Au-1I-YhG" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="151" id="53h-N7-aPm"/>
+                            <constraint firstItem="xOW-Ak-UnT" firstAttribute="width" secondItem="6Au-1I-YhG" secondAttribute="width" id="VDf-BI-jBK"/>
+                            <constraint firstItem="xOW-Ak-UnT" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="XBz-hE-U60"/>
+                            <constraint firstItem="6Au-1I-YhG" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="fyD-59-CmT"/>
+                            <constraint firstItem="kve-du-fiN" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="lzz-1V-AZe"/>
+                            <constraint firstItem="xOW-Ak-UnT" firstAttribute="top" secondItem="6Au-1I-YhG" secondAttribute="bottom" constant="8" id="usP-oL-Nzo"/>
+                            <constraint firstItem="kve-du-fiN" firstAttribute="top" secondItem="xOW-Ak-UnT" secondAttribute="bottom" constant="8" id="vgN-XF-dcU"/>
+                            <constraint firstItem="kve-du-fiN" firstAttribute="width" secondItem="xOW-Ak-UnT" secondAttribute="width" id="vsM-M0-9qe"/>
+                            <constraint firstItem="xOW-Ak-UnT" firstAttribute="centerX" secondItem="6Au-1I-YhG" secondAttribute="centerX" id="xex-AU-5gw"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="DJILogo" width="1280" height="737"/>
+        <image name="facelarge" width="1024" height="1024"/>
+    </resources>
+</document>

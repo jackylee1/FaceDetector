@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Camera View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CameraViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QhH-bH-vLr" userLabel="placeholder">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3oO-Ux-rYg" userLabel="overlay">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tjk-wH-oy6" userLabel="camera">
+                                <rect key="frame" x="310" y="28" width="51" height="31"/>
+                                <connections>
+                                    <action selector="cameraDeviceChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Fsp-YK-dzR"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="inu-rW-ZZZ">
+                                <rect key="frame" x="8" y="638.5" width="359" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="inu-rW-ZZZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-8" id="0Qb-Bu-2BU"/>
+                            <constraint firstItem="QhH-bH-vLr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="76g-Gz-ADK"/>
+                            <constraint firstItem="3oO-Ux-rYg" firstAttribute="top" secondItem="QhH-bH-vLr" secondAttribute="top" id="7Td-1e-MyG"/>
+                            <constraint firstAttribute="trailing" secondItem="QhH-bH-vLr" secondAttribute="trailing" id="9WX-cJ-xOr"/>
+                            <constraint firstItem="QhH-bH-vLr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="BSA-q2-npO"/>
+                            <constraint firstItem="3oO-Ux-rYg" firstAttribute="leading" secondItem="QhH-bH-vLr" secondAttribute="leading" id="BU4-zF-bPy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tjk-wH-oy6" secondAttribute="trailing" id="Gdo-kg-eq6"/>
+                            <constraint firstItem="3oO-Ux-rYg" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="TZf-IK-ePM"/>
+                            <constraint firstItem="3oO-Ux-rYg" firstAttribute="trailing" secondItem="QhH-bH-vLr" secondAttribute="trailing" id="hvy-Ys-Dha"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="inu-rW-ZZZ" secondAttribute="bottom" constant="8" id="kWc-dS-1xx"/>
+                            <constraint firstItem="QhH-bH-vLr" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="qy2-Cs-629"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="inu-rW-ZZZ" secondAttribute="trailing" constant="-8" id="syj-QV-qKF"/>
+                            <constraint firstItem="tjk-wH-oy6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="vgF-Ts-yWy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraSwitch" destination="tjk-wH-oy6" id="12V-q4-k1p"/>
+                        <outlet property="overlayView" destination="3oO-Ux-rYg" id="0e4-8Z-e5A"/>
+                        <outlet property="placeHolder" destination="QhH-bH-vLr" id="VmU-ia-9cf"/>
+                        <outlet property="statusLabel" destination="inu-rW-ZZZ" id="Rd5-SN-smG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
