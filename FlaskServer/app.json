@@ -1,0 +1,36 @@
+{
+  "name": "Twilio Server",
+  "description": "A simple Python server to distribute access tokens and route calls",
+  "repository": "https://github.com/mahdi-hosseini/FaceDetector/FlaskServer",
+  "keywords": [
+    "twilio",
+    "voice",
+    "mobile"
+  ],
+  "env": {
+    "ACCOUNT_SID": {
+      "description": "Twilio Account Sid",
+      "required": true
+    },
+    "API_KEY": {
+      "description": "Twilio API Key",
+      "required": true
+    },
+    "API_KEY_SECRET": {
+      "description": "Twilio API Key Secret",
+      "required": true
+    },
+    "PUSH_CREDENTIAL_SID": {
+      "description": "Twilio Push Credential Sid",
+      "required": true
+    },
+    "APP_SID": {
+      "description": "TwiML App Sid that points to this web server",
+      "required": true
+    },
+    "AUTH_TOKEN": {
+      "description": "Twilio Auth Token",
+      "required": true
+    }
+  }
+}
